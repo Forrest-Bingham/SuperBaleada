@@ -1,14 +1,17 @@
 .menu{
     padding-top:3%;
 }
+.list{
+    display:flex;
+    justify-content: space-between;
+}
 .item{
     border: 1px solid black;
-    width: 300px;
+    width: 18%;
     height: 300px;
-    margin-left: 5%;
 }
 .image{
     padding-top: 5%;
-    width:250px;
+    width:100%;
     height:200px;
 }
