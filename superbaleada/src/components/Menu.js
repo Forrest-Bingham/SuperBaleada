@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useStart} from "react";
 import "./menu.css";
 import MenuItems from "./MenuItems";
 
-const Menu = () => {
+const Menu = (props) => {
 
+    
+  
 
     return (
         <div className="menu">
@@ -11,7 +13,10 @@ const Menu = () => {
                 <h1>Super Baleada Menu</h1>
             </div>
 
-            <MenuItems/>
+            <MenuItems
+            cartCount={props.cartCount}
+            addCartCount={props.addCartCount}
+            />
 
 
         </div>
