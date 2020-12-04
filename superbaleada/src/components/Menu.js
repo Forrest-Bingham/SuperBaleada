@@ -1,10 +1,11 @@
-import React, {useStart} from "react";
+import React, {useState, useContext} from "react";
 import "./menu.css";
 import MenuItems from "./MenuItems";
+import CartContext from "../contexts/CartContext";
 
 const Menu = (props) => {
 
-    
+    const {cart, setCart, clearCart, addToCartSencilla } = useContext(CartContext);    
   
 
     return (
@@ -14,8 +15,10 @@ const Menu = (props) => {
             </div>
 
             <MenuItems
-            cartCount={props.cartCount}
-            addCartCount={props.addCartCount}
+            cart={cart}
+            setCart={setCart}
+            clearCart={clearCart}
+            addToCartSencilla={addToCartSencilla}
             />
 
 

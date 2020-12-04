@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import sencilla from "./images/sencilla.jpg";
 import huevo from "./images/huevo.jpg";
 import aguacate from "./images/aguacate.jpg";
@@ -7,6 +7,8 @@ import todo from "./images/todo.jpg";
 import "./menu.css";
 
 const MenuItems = (props) => {
+
+
 
     const [sencillaCount, setSencillaCount] = useState(0)
     const [huevoCount, setHuevoCount] = useState(0)
@@ -87,11 +89,12 @@ const MenuItems = (props) => {
     return(
         <div className="list">
 
+        {console.log(props,"props")}
         <div className="item">
             <img src={sencilla} alt="Baleada Sencilla" className="image" />
             <h2>Sencilla L6</h2>
             <div className="buttons">
-                <button>Add To Cart</button>
+                <button onClick={()=>props.addToCartSencilla(sencillaCount)}>Add To Cart</button>
                 <button className="button" onClick={removeSencilla}>-</button>
                 <button className="button" onClick={addSencilla}>+</button>
                 <p>{sencillaCount}</p>
